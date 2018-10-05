@@ -1,0 +1,181 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+	background-color: #34675c;
+}
+
+footer a {
+	color: #fff;
+	text-decoration: underline;
+}
+
+footer a:hover {
+	color: #324851;
+}
+
+.navbar {
+	background-color: #324851;
+}
+
+.navbar-nav {
+    width: 100%;
+  }
+
+li {
+      width: 150px;
+    }
+
+
+.cerca {
+	background-color: #7da3a1;
+	border-width: 2px;
+	border-color: #4c6564;
+	color: #fff;
+}
+
+.btn:hover {
+	color: #e5e5e5;
+}
+
+div.row {
+	margin-top: 50px;
+}
+
+h2 {
+	font-weight: 600;
+}
+
+h1 {
+	font-weight: 800;
+}
+
+h5 {
+	font-weight: 400;
+}
+
+
+.cattura {
+	background-color: #86ac41;
+	border-width: 2px;
+	border-color: #43591a;
+	color: #fff;
+}
+
+.info {
+	background-color: #34675c;
+	text-align: center;
+}
+
+.pokemon {
+	background-color: #324851;
+	padding: 15px;
+	margin-right: 20px;
+	margin-top: 20px;
+	margin-left: 20px;
+	box-shadow: 0px 0px 10px #2d4048;
+	text-align: center;
+	color: #fff;
+	display: none;
+}
+
+.legenda {
+	display: none;
+	margin-bottom: 10px;
+}
+
+.legenda img {
+	padding-left: 30px;
+}
+
+.listCaught .pokemon {
+	display: block;
+}
+
+.head {
+	background : url('bg_head.jpg');
+	background-position: 50% 30%;
+	border-radius: 0;
+	padding: 50px;
+}
+
+.pokemon-principale {
+	background-color: #324851;
+	padding: 15px;
+	margin-right: 20px;
+	margin-top: 20px;
+	margin-left: 20px;
+	box-shadow: 0px 0px 10px #2d4048;
+	color: #fff;
+	width:80%;
+}
+
+.pokemon-principale .title {
+	text-align: center;
+}
+
+.details {
+	color: #fff;
+}
+
+footer {
+	color: #fff;
+}
+
+
+#container-map{width: 100%; height:500px; top:100px; left:0; display: none}
+
+.popup a{color:#fe4a5d;text-decoration: none;} 
+.popup h2{margin:0;padding:0; color: #000;}
+      
+      
+#map-canvas{width: 100%; height:100%; position:relative;z-index:10;}
+
+
+.cerchio {
+	width:400px;
+	height:400px;
+	position: absolute;
+	border-radius:200px;
+	border-style: solid;
+	border-color: green;
+	-webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 0.7s; /* Safari 4.0 - 8.0 */
+    animation-name: example;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    display: none;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.cerchio img {
+	position: absolute;
+	margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+@keyframes example {
+    0%   {border-color:red; width:200px; height:200px;}
+    50%  {border-color:yellow; width:150px; height:150px;}
+    90%  {border-color:green; width:120px; height:120px;}
+    100% {border-color:blue; width:100px; height:100px;;}
+}
+
+.fix {
+	margin-top:50px;
+	height: 400px;
+	display: none;
+	background-color: #324851;
+}
+
+.sfera img {
+	width:50px;
+	height:50px;
+	margin-top: 300px;
+}

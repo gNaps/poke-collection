@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="pokemon.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,800" rel="stylesheet">
+
+    <script src="https://rawgit.com/PokeAPI/pokeapi-js-wrapper/master/dist/index.js"></script>
+    <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8FxzBpjLLbKHQkyQ9EAV0PW0RolkYVPY
+&callback=initialize"
+  type="text/javascript"></script> -->
+
+    <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?key=AjjXCE7rtKEV9ugDWfKPSoiIlyjzswcwrr7ZC2iSdwi_JsFEWsNiEBtv-7SO9AFp&callback=loadMapScenario' async defer></script>
+    <script src="pokemon_script.js"></script>
+
+    <title>Pokemon Collection - Home</title>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark">
+    <div class="d-flex w-50 order-0">
+        <a class="navbar-brand mr-1" href="#"><img src="logo_pokecollection.png"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+    <div class="navbar-collapse collapse justify-content-center order-2" id="collapsingNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="file:///C:/Users/stemi/Desktop/Gabriele/Pokemon/index.html">Home <span class="sr-only">Home</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="file:///C:/Users/stemi/Desktop/Gabriele/Pokemon/my_pokemon.html">My Pokemon</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Opzioni</a>
+            </li>
+        </ul>
+    </div>
+    <span class="navbar-text small text-truncate mt-1 w-50 text-right order-1 order-md-last"><img src="logo_naps.png"></span>
+</nav>
+
+    <main role="main">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron head">
+        <h1 style="text-align: center; color: #fff">Benvenuto, allenatore. Riuscirai a catturarli tutti?</h1>
+        <div class="container" id="rules">
+          <div class="row justify-content-center d-flex align-items-center">
+            <div class="col-md-1">
+              <img src="https://play.pokemonshowdown.com/sprites/trainers-ordered/001.png">
+            </div>
+            <div class="col-md-6">
+              <h5 style="color: #fff; text-shadow: 0px 1px 5px #000;">Pokecollection è un mini-gioco online nel quale dovrai cercare di completare il pokedex nel minor tempo possibile. 
+              Le regole sono poche e semplici: ogni volta che schiaccerai il pulsante appariranno 6 Pokemon, di questi però solo uno 
+              potrai provare a catturarlo, quindi sceglilo con attenzione! Puoi selezionarlo direttamente dalla mappa oppure usando la tabella infondo 
+              alla pagina. Per consultare il pokedex visita la pagina "My Pokemon". Buona fortuna allenatore, comincia la tua avventura cliccando il 
+              bottone qui sotto!</h5>
+            </div>
+            <div class="col-md-1">
+              <img src="https://play.pokemonshowdown.com/sprites/trainers-ordered/002.png">
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center d-flex align-items-center">
+          <div class="col-md-4">
+            <div class="legenda"></div>
+          </div>
+        </div>
+        <div class="container justify-content-center" id="container-map">
+          <div id ="map-canvas"></div>
+        </div>
+      </div>
+
+      <div class="container info">
+        <!-- Example row of columns -->
+        <div class="row justify-content-center">
+          <div class="col-md-4">
+            <button type="button" class="btn cerca" onclick="apparePokemon()">Cerca Pokemon</button>
+            <div class="fix">
+              <div class="cerchio"></div>
+              <div class="sfera"></div>
+              <div class="nome"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Prima riga di pokemon apparsi -->
+        <div class="row justify-content-center">
+          <div class="col-md-3 pokemon" id="pokemonUno">
+          	
+            
+          </div>
+          <div class="col-md-3 pokemon" id="pokemonDue">
+            
+          </div>
+          <div class="col-md-3 pokemon" id="pokemonTre">
+            
+          </div>
+        </div>
+        <!-- Seconda riga di pokemon apparsi -->
+        <div class="row justify-content-center">
+          <div class="col-md-3 pokemon" id="pokemonQuattro">
+            
+          </div>
+          <div class="col-md-3 pokemon" id="pokemonCinque">
+            
+          </div>
+          <div class="col-md-3 pokemon" id="pokemonSei">
+            
+          </div>
+        </div>
+        <hr>
+
+      </div> <!-- /container -->
+
+    </main>
+
+    <footer class="container">
+      <p>&copy; Pokemon Collection - Naps 2018 - Si ringrazia <a href="https://www.flaticon.com/">Flaticon</a> per le icone. Pokemon è un marchio registrato Nintendo, The Pokemon Company, Game Freak, questo sito non è a scopo commerciale.</p>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
